@@ -19,7 +19,7 @@ It's a responsive, single-page personal portfolio that highlights my skills, edu
 - Hosted with GitHub Pages  
 
 ## 📄 Download CV
-📥 [Click here to download my CV](files/natasha-cloete-cv.pdf)
+📥 [Click here to download my CV](natasha-cloete-cv.pdf)
 
 ## 📬 Contact
 - ✉️ [natashacloete4v8@gmail.com](mailto:natashacloete4v8@gmail.com)  
