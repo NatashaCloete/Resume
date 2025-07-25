@@ -4,7 +4,7 @@ This is the codebase for my virtual CV website.
 It's a responsive, single-page personal portfolio that highlights my skills, education, experience, and contact information.
 
 ## 🌐 Live Site
-🔗 [View Online](https://NatashaCloete.github.io/resume)
+🔗 [View Online](https://NatashaCloete.github.io/Resume)
 
 ## 📁 Project Structure
 - `index.html` – Main HTML file  
