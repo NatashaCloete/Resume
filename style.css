@@ -147,6 +147,17 @@ header {
   transform: scale(1.05);
 }
 
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  margin-left: 10px;
+}
+.btn-secondary:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
 /* Sections */
 section {
   background: var(--card);
@@ -176,17 +187,6 @@ ul.info-list li::before {
   margin-right: 4px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  border-top: 1px solid var(--border);
-  background: var(--card);
-  font-size: 0.9rem;
-  box-shadow: var(--shadow) inset 0 6px 6px -6px rgba(0,0,0,0.3);
-  backdrop-filter: var(--glass-blur);
-}
-
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .profile-header {
@@ -209,17 +209,11 @@ footer {
     width: 100%;
     text-align: center;
   }
-}
-/* Buttons: add a secondary style */
-.btn-secondary {
-  background-color: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  margin-left: 10px;
-}
-.btn-secondary:hover {
-  background-color: var(--accent);
-  color: white;
+
+  .case-study-images img,
+  .prototype-embed iframe {
+    width: 100%;
+  }
 }
 
 /* Portfolio gallery grid */
@@ -243,7 +237,7 @@ footer {
   box-shadow: 0 10px 20px rgba(4, 108, 78, 0.4);
 }
 
-/* Keep footer styles from previous */
+/* Footer image */
 footer {
   text-align: center;
   padding: 0;
@@ -257,4 +251,51 @@ footer {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+/* ───────────────────────────────────────────── */
+/* NEW ADDITIONS FOR CHECKERS CASE STUDY PAGE    */
+/* ───────────────────────────────────────────── */
+
+/* Case Study Page Heading (outside card) */
+.case-study-heading {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  color: var(--accent);
+  text-align: center;
+  margin: 4rem auto 2rem auto;
+}
+
+/* Case Study Images */
+.case-study-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case-study-images img {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  object-fit: contain;
+}
+
+/* Embedded Figma Prototype */
+.prototype-embed {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2.5rem 0;
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.prototype-embed iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 12px;
 }

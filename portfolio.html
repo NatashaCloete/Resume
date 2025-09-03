@@ -1,74 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Natasha Cloete – Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<!-- Checkers Case Study heading outside white box -->
+<h2 class="case-study-heading">Checkers Sixty60 Case Study</h2>
 
-  <!-- Sticky Compact Nav -->
-  <nav id="sticky-navbar">
-    <span>Natasha Cloete</span>
-  </nav>
+<!-- Portfolio Section -->
+<section>
+  <p>This project includes wireframes, user flows, UI mockups, and the interactive prototype for Checkers Sixty60.</p>
 
-  <!-- Header Hero Section -->
-  <header>
-    <div class="profile-header">
-      <img src="images/natasha.jpg" alt="Natasha Cloete" class="profile-pic" />
-      <div class="profile-text">
-        <h1>Natasha Cloete</h1>
-        <h2 class="subtitle alt-font">UI/UX Designer Portfolio</h2>
-        <p>Pretoria, South Africa</p>
-        <p>Phone: +27 76 923 4168 |
-          <a href="mailto:natashacloete4v8@gmail.com">natashacloete4v8@gmail.com</a>
-        </p>
-        <p>
-          <a href="https://www.linkedin.com/in/natasha-cloete-67aa1627a" target="_blank">LinkedIn</a> |
-          <a href="https://github.com/NatashaCloete" target="_blank">GitHub</a>
-        </p>
-        <a href="natasha-cloete-cv.pdf" class="btn" download>📄 Download My CV</a>
-        <a href="index.html" class="btn btn-secondary">← Back to CV</a>
-      </div>
-    </div>
-  </header>
+  <!-- Case study images -->
+  <div class="case-study-images">
+    <img src="images/Hero.png" alt="Checkers Sixty60 - Hero" />
+    <img src="images/02_Problem.png" alt="Checkers Sixty60 - Section 1" />
+    <img src="images/03_Stats.png" alt="Checkers Sixty60 - Section 2" />
+    <img src="images/04_Personas.png" alt="Checkers Sixty60 - Section 3" />
+    <img src="images/05_Empathy Maps.png" alt="Checkers Sixty60 - Section 4" />
+    <img src="images/06_Jouney Maps.png" alt="Checkers Sixty60 - Section 5" />
+    <img src="images/07_User Flow.png" alt="Checkers Sixty60 - Section 6" />
+    <img src="images/08_Card Sorting.png" alt="Checkers Sixty60 - Section 7" />
+    <img src="images/09_Information Architecture.png" alt="Checkers Sixty60 - Section 8" />
+    <img src="images/10_Wireframes.png" alt="Checkers Sixty60 - Section 9" />
+    <img src="images/11_Test Phase.png" alt="Checkers Sixty60 - Section 10" />
+    <img src="images/12_Prototype Heading.png" alt="Checkers Sixty60 - Section 11" />
 
-  <!-- Portfolio Section -->
-  <section>
-    <h2>Checkers 6060 Case Study</h2>
-    <p>This project includes wireframes, user flows, UI mockups, and the interactive prototype for Checkers 6060.</p>
-
-    <div class="portfolio-gallery">
-      <!-- Replace these image names with your actual case study PNG filenames -->
-      <img src="images/checkers-6060-1.png" alt="Checkers 6060 - Wireframe 1" />
-      <img src="images/checkers-6060-2.png" alt="Checkers 6060 - Wireframe 2" />
-      <img src="images/checkers-6060-3.png" alt="Checkers 6060 - UI Mockup 1" />
-      <img src="images/checkers-6060-4.png" alt="Checkers 6060 - UI Mockup 2" />
-      <img src="images/checkers-6060-5.png" alt="Checkers 6060 - Final Design" />
+    <!-- Embed interactive prototype iframe here -->
+    <div class="prototype-embed">
+      <iframe
+        src="https://your-figma-prototype-url"
+        style="border:none; width:100%; height:600px;"
+        allowfullscreen
+      ></iframe>
     </div>
 
-    <h3>Interactive Prototype</h3>
-    <p>Explore the clickable prototype on Figma:</p>
-    <p>
-      <a href="https://www.figma.com/proto/your-prototype-link" target="_blank" class="btn btn-secondary">View Prototype</a>
-    </p>
-  </section>
-
-  <!-- Footer with full PNG image -->
-  <footer>
-    <img src="images/footer.png" alt="Footer" class="footer-image" />
-  </footer>
-
-  <script>
-    const observer = new IntersectionObserver(([entry]) => {
-      const stickyNav = document.getElementById('sticky-navbar');
-      stickyNav.style.display = entry.isIntersecting ? 'none' : 'flex';
-    }, { threshold: 0 });
-
-    const mainHeader = document.querySelector('.profile-header');
-    observer.observe(mainHeader);
-  </script>
-
-</body>
-</html>
+    <img src="images/13_Footer.png" alt="Checkers Sixty60 - Section 12" />
+  </div>
+</section>
