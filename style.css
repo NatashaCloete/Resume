@@ -278,18 +278,17 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 10px 0;
-  max-width: 1400px; /* limit max width */
-  margin: 0 auto;
+  gap: 0px; /* ← NO GAP between images */
+  padding: 0;
 }
 
 .case-study-images img {
   width: 100%;
-  max-width: 1400px; /* set max width */
-  height: auto;      /* keep aspect ratio */
-  border-radius: 12px;
-  box-shadow: var(--shadow);
+  max-width: 880px; /* slightly less than white section to show border */
+  height: auto;
+  border-radius: 0; /* ← REMOVE ROUNDED CORNERS */
+  box-shadow: none; /* ← OPTIONAL: Remove shadow to keep them clean */
   object-fit: contain;
   display: block;
 }
+
