@@ -229,51 +229,67 @@ footer {
 /* ========= PORTFOLIO-SPECIFIC ADDITIONS ========= */
 
 /* Header layout for portfolio page */
-.vertical-header 
-{
+.vertical-header {
   display: flex;
-  flex-direction: column; /* Stack vertically */
-  align-items: center;    /* Center horizontally */
-  text-align: center;     /* Center text inside children */
-  gap: 1.2rem;            /* Spacing between items */
-  margin-top: 3rem;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  text-align: center;
+  gap: 0.8rem;            /* reduced gap for closer spacing */
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.portfolio-title 
-{
+.portfolio-title {
   font-family: 'Merriweather', serif;
   font-size: clamp(3rem, 6vw, 4rem);
   font-weight: 800;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin: 0; /* Reset margin for consistent spacing */
+  margin: 0;
 }
 
-.social-links 
-{
+.social-links {
   font-size: 1.1rem;
+  margin: 0; /* remove default margins */
 }
 
-.social-links a 
-{
+.social-links a {
   color: var(--accent);
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 8px; /* tighter spacing between links */
 }
 
-.social-links a:hover 
-{
+.social-links a:hover {
   text-decoration: underline;
 }
 
-.button-row 
-{
+.button-row {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 3rem;
+  margin: 0; /* remove top and bottom margin */
+  padding-top: 0.5rem; /* small padding to separate from links */
+}
+
+/* Fix for images inside .case-study-images */
+.case-study-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0; /* add some vertical padding */
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.case-study-images img {
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  object-fit: contain; /* prevent image cropping */
+  display: block;
 }
