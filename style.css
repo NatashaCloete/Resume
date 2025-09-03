@@ -149,6 +149,7 @@ header {
   transform: scale(1.05);
 }
 
+/* (Existing) secondary button */
 .btn-secondary {
   background-color: transparent;
   color: var(--accent);
@@ -158,6 +159,26 @@ header {
 .btn-secondary:hover {
   background-color: var(--accent);
   color: white;
+}
+
+/* (NEW) keep old alt-btn working too, for compatibility */
+.alt-btn {
+  background-color: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  margin-left: 10px;
+}
+.alt-btn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* (NEW) tidy button row layout */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
 }
 
 /* Sections */
@@ -205,6 +226,59 @@ footer {
   margin: 0 auto;
 }
 
+/* ========= PORTFOLIO-SPECIFIC ADDITIONS ========= */
+
+/* Make the “PORTFOLIO” heading look like h1 but in caps */
+.all-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+/* Keep the case-study heading consistent with site h2 */
+.case-study-heading {
+  /* uses the global h2 style; no extra needed here */
+}
+
+/* White card wrapper already inherits from `section`; these help center content */
+.case-study-wrapper {
+  text-align: center; /* helps center inline elements */
+}
+
+/* Stack images neatly and center them */
+.case-study-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Prevent huge images; keep them inside the 960px content width */
+.case-study-images img {
+  width: 100%;
+  max-width: 920px; /* slightly inside the card paddings */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Playable Figma prototype */
+.prototype-embed {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.prototype-embed iframe {
+  width: 100%;
+  max-width: 920px;
+  height: 600px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .profile-header {
@@ -224,7 +298,14 @@ footer {
   }
 
   .btn {
-    width: 100%;
-    text-align: center;
+    width: auto; /* keep buttons side by side if space allows */
+  }
+
+  .case-study-images img {
+    max-width: 100%;
+  }
+
+  .prototype-embed iframe {
+    height: 520px;
   }
 }
