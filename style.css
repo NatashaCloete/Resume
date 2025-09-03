@@ -309,3 +309,37 @@ footer {
     height: 520px;
   }
 }
+/* Portfolio Title Styling */
+.portfolio-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #004d40; /* Match your theme color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Optional: Improve link styling for social links */
+.social-links {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-links a {
+  color: #004d40;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Center buttons under links */
+.button-row {
+  text-align: center;
+  margin-bottom: 3rem;
+}
