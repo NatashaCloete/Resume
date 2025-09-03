@@ -2,7 +2,7 @@
 
 :root {
   --bg: #e9f8f2;
-  --card: rgba(255, 255, 255, 0.7);
+  --card: rgba(255, 255, 255, 0.85);
   --text: #1e1e1e;
   --accent: #046c4e;
   --accent-light: #d1fae5;
@@ -17,285 +17,68 @@ body {
   color: var(--text);
   line-height: 1.7;
   font-size: clamp(1rem, 2vw, 1.1rem);
-  padding: 0 20px;
-  max-width: 960px;
-  margin: auto;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
+/* Heading outside white box */
+.case-study-heading {
   font-family: 'Merriweather', serif;
-  font-size: clamp(2rem, 6vw, 2.6rem);
+  font-size: clamp(2rem, 5vw, 2.4rem);
   color: var(--accent);
-}
-
-.subtitle {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.1rem, 3vw, 1.4rem);
-  color: var(--accent);
-  font-weight: 500;
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-
-.subtitle.alt-font {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  color: #444;
-  font-weight: 500;
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.4rem, 4vw, 1.8rem);
-  color: var(--accent);
-  border-left: 5px solid var(--accent);
-  padding-left: 15px;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: clamp(1.1rem, 3vw, 1.3rem);
-  color: var(--accent);
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* Sticky compact nav */
-#sticky-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--glass-blur);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  box-shadow: var(--shadow);
-  z-index: 1000;
-  border-bottom: 1px solid var(--border);
-}
-#sticky-navbar span {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-/* Header section */
-header {
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 3rem 1rem 2rem;
-  margin-top: 2rem;
+  text-align: center;
+  margin-top: 3rem;
   margin-bottom: 2rem;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Horizontal layout: photo left, text right */
-.profile-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 3rem;
-  flex-wrap: nowrap;
-  padding-left: 2rem;
-}
-
-.profile-pic {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--accent);
-  box-shadow: var(--shadow);
-  flex-shrink: 0;
-}
-
-.profile-text {
-  flex: 1;
-  text-align: left;
-  min-width: 0;
-  padding-left: 1rem;
-}
-
-/* Download CV button */
-.btn {
-  display: inline-block;
-  background-color: var(--accent);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s;
-  margin-top: 12px;
-}
-.btn:hover {
-  transform: scale(1.05);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  margin-left: 10px;
-}
-.btn-secondary:hover {
-  background-color: var(--accent);
-  color: white;
-}
-
-/* Sections */
-section {
+/* White box wrapper for entire case study */
+.case-study-wrapper {
   background: var(--card);
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 32px;
+  padding: 40px;
+  max-width: 1480px;
+  margin: 0 auto 60px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
-  backdrop-filter: var(--glass-blur);
   border: 1px solid var(--border);
 }
 
-/* Lists */
-ul {
-  padding-left: 1.2rem;
+/* Image container */
+.case-study-images {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }
-ul.skills-list,
-ul.info-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 12px;
+
+/* Images inside case study */
+.case-study-images img {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
-ul.skills-list li::before,
-ul.info-list li::before {
-  content: "▹ ";
-  color: var(--accent);
-  font-weight: bold;
-  margin-right: 4px;
+
+/* Figma iframe styles */
+.prototype-embed iframe {
+  width: 100%;
+  max-width: 1400px;
+  height: 700px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
+
+/* Footer image already included above */
 
 /* Responsive tweaks */
-@media (max-width: 768px) {
-  .profile-header {
-    flex-direction: row;
-    gap: 1rem;
-    align-items: flex-start;
-    padding-left: 0;
-  }
-
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-  }
-
-  .profile-text {
-    font-size: 0.95rem;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
+@media (max-width: 1440px) {
+  .case-study-wrapper {
+    padding: 30px 20px;
   }
 
   .case-study-images img,
   .prototype-embed iframe {
     width: 100%;
   }
-}
-
-/* Portfolio gallery grid */
-.portfolio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.portfolio-gallery img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  cursor: zoom-in;
-}
-.portfolio-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(4, 108, 78, 0.4);
-}
-
-/* Footer image */
-footer {
-  text-align: center;
-  padding: 0;
-  border: none;
-  background: none;
-}
-
-.footer-image {
-  width: 100%;
-  max-width: 960px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ───────────────────────────────────────────── */
-/* NEW ADDITIONS FOR CHECKERS CASE STUDY PAGE    */
-/* ───────────────────────────────────────────── */
-
-/* Case Study Page Heading (outside card) */
-.case-study-heading {
-  font-family: 'Merriweather', serif;
-  font-size: clamp(1.8rem, 5vw, 2.4rem);
-  color: var(--accent);
-  text-align: center;
-  margin: 4rem auto 2rem auto;
-}
-
-/* Case Study Images */
-.case-study-images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.case-study-images img {
-  width: 90%;
-  max-width: 1000px;
-  height: auto;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  object-fit: contain;
-}
-
-/* Embedded Figma Prototype */
-.prototype-embed {
-  width: 90%;
-  max-width: 1000px;
-  margin: 2.5rem 0;
-  box-shadow: var(--shadow);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.prototype-embed iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
-  border-radius: 12px;
 }
