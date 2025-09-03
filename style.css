@@ -231,12 +231,12 @@ footer {
 /* Header layout for portfolio page */
 .vertical-header {
   display: flex;
-  flex-direction: column; /* stack vertically */
-  align-items: center;    /* center horizontally */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  gap: 0.8rem;            /* reduced gap for closer spacing */
+  gap: 0.8rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* reduced bottom margin to bring content closer */
 }
 
 .portfolio-title {
@@ -279,17 +279,17 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 10px 0; /* add some vertical padding */
-  max-width: 920px;
+  padding: 10px 0;
+  max-width: 1400px; /* limit max width */
   margin: 0 auto;
 }
 
 .case-study-images img {
   width: 100%;
-  max-width: 920px;
-  height: auto;
+  max-width: 1400px; /* set max width */
+  height: auto;      /* keep aspect ratio */
   border-radius: 12px;
   box-shadow: var(--shadow);
-  object-fit: contain; /* prevent image cropping */
+  object-fit: contain;
   display: block;
 }
