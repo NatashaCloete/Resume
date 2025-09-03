@@ -229,47 +229,51 @@ footer {
 /* ========= PORTFOLIO-SPECIFIC ADDITIONS ========= */
 
 /* Header layout for portfolio page */
-.vertical-header {
+.vertical-header 
+{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  flex-direction: column; /* Stack vertically */
+  align-items: center;    /* Center horizontally */
+  text-align: center;     /* Center text inside children */
+  gap: 1.2rem;            /* Spacing between items */
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
-/* Big portfolio page heading */
-.portfolio-title {
+.portfolio-title 
+{
   font-family: 'Merriweather', serif;
   font-size: clamp(3rem, 6vw, 4rem);
   font-weight: 800;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 0.8rem;
+  margin: 0; /* Reset margin for consistent spacing */
 }
 
-/* Social link styling */
-.social-links {
+.social-links 
+{
   font-size: 1.1rem;
-  margin-bottom: 1.2rem;
 }
 
-.social-links a {
+.social-links a 
+{
   color: var(--accent);
   text-decoration: none;
   margin: 0 10px;
 }
 
-.social-links a:hover {
+.social-links a:hover 
+{
   text-decoration: underline;
 }
 
-/* Button row should stay centered */
-.button-row {
+.button-row 
+{
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0;
   margin-bottom: 3rem;
 }
