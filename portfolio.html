@@ -2,39 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio – Natasha Cloete</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Your Name</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- Heading outside the white box -->
-<h2 class="case-study-heading">Checkers Sixty60 Case Study</h2>
-
-<!-- Single white container section that wraps EVERYTHING -->
-<section class="case-study-wrapper">
-  <div class="case-study-images">
-    <img src="images/Hero.png" alt="Hero" />
-    <img src="images/02_Problem.png" alt="Problem" />
-    <img src="images/03_Stats.png" alt="Stats" />
-    <img src="images/04_Personas.png" alt="Personas" />
-    <img src="images/05_Empathy Maps.png" alt="Empathy Maps" />
-    <img src="images/06_Jouney Maps.png" alt="Journey Maps" />
-    <img src="images/07_User Flow.png" alt="User Flow" />
-    <img src="images/08_Card Sorting.png" alt="Card Sorting" />
-    <img src="images/09_Information Architecture.png" alt="Information Architecture" />
-    <img src="images/10_Wireframes.png" alt="Wireframes" />
-    <img src="images/11_Test Phase.png" alt="Test Phase" />
-    <img src="images/12_Prototype Heading.png" alt="Prototype Heading" />
-    
-    <!-- Embedded Figma prototype -->
-    <div class="prototype-embed">
-      <iframe
-        src="https://your-figma-prototype-url"
-        allowfullscreen
-      ></iframe>
+  <!-- Sticky Nav -->
+  <header id="navbar">
+    <div class="nav-content">
+      <span class="nav-name">Your Name</span>
     </div>
+  </header>
 
-    <!-- Footer image at the very end -->
-    <img src="images/13_Footer.png" alt="Footer Design" class="footer-image" />
-  </div>
-</section>
+  <main>
+    <!-- Profile Section (same as CV page) -->
+    <section class="profile">
+      <img src="your-photo.jpg" alt="Your Photo" class="profile-pic" />
+      <h1 class="name">Your Name</h1>
+      <p class="title">UI/UX Designer</p>
+      <p class="details">📍 Location | ✉️ email@example.com | 📞 123-456-7890</p>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <a href="cv.pdf" class="btn" download>Download CV</a>
+        <a href="cv.html" class="btn secondary">Back to CV</a>
+      </div>
+
+      <!-- Portfolio Heading -->
+      <h2 class="portfolio-heading">PORTFOLIO</h2>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="case-study-wrapper">
+      <h3>Case Study Title</h3>
+      <div class="case-study-images">
+        <img src="case-study1.png" alt="Case Study Screenshot 1" />
+        <img src="case-study2.png" alt="Case Study Screenshot 2" />
+      </div>
+
+      <!-- Playable Prototype -->
+      <div class="prototype-embed">
+        <iframe
+          style="border: none;"
+          src="https://www.figma.com/embed?embed_host=share&url=YOUR_FIGMA_LINK_HERE"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Sticky Nav scroll effect
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 100) {
+        navbar.classList.add("visible");
+      } else {
+        navbar.classList.remove("visible");
+      }
+    });
+  </script>
+</body>
+</html>
